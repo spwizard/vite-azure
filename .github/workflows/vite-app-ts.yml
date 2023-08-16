@@ -62,5 +62,9 @@ jobs:
         with:
           app-name: ViteAzureReact # Name of your Azure Web App
           slot-name: 'Production'
+           ###### Repository/Build Configurations ######
+           app_location: "src" # App source code path relative to repository root
+           output_location: "build" # Built app content directory, relative to app_location - optional
+           ###### End of Repository/Build Configurations ######
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }} # Publish profile should always be stored as secrets in your repository Settings - Secrets and variables - Actions - secrets
           package: .
